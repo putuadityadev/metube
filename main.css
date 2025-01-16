@@ -49,8 +49,8 @@ li {
 input {
   border: solid 1px  rgba(38, 0, 104, 0.08);
   border-radius: 20px;
-  width: 30dvw;
-  height: 38px;
+  width: 40dvw;
+  height: 40px;
   padding-left: 15px;
 }
 
@@ -89,6 +89,8 @@ button {
   border-right: solid 2px rgb(250, 247, 255);
   margin: 0;
   display: none;
+  transform: translateX(-60dvw);
+  
 }
 
 .icon {
@@ -115,6 +117,19 @@ button {
   justify-content: center;
   align-items: center;
 }
+
+.active-menu {
+  
+  transform: translateX(60dvw);
+}
+
+.icon-search {
+  width: 20px;
+  fill:  white;
+  display: none;
+}
+
+
 @media (max-width : 1024px) {
   .ul-nav {
     display: none;
@@ -132,5 +147,26 @@ button {
 
   .hamburger {
     display: flex;
+  }
+}
+
+@media (max-width : 530px) {
+  .hamburger {
+    display: none;
+  }
+
+  .search-text {
+    display: none;
+  }
+
+  .icon-search {
+    display: flex;
+    width: 18px;
+    height: 18px;
+  }
+
+  button {
+    padding: 10px 12px;
+    border-radius: 100%;
   }
 }
